@@ -23,7 +23,7 @@
 
 ***
 
-![figure 0-1](./picture/ch1.assert/figure01)
+![figure 0-1](./picture/ch1.assets/figure01)
 
 如图0-1所示，xv6使用了传统的内核概念:**一个向其他运行中程序提供服务的特殊程序**。
 
