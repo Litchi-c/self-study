@@ -1,7 +1,17 @@
+colorscheme molokai
+syntax enable
+
+" CRAZY!!
+noremap <Left> :echoe "Use h"<CR>
+noremap <Right> :echoe "Use l"<CR>
+noremap <Up> :echoe "Use k"<CR>
+noremap <Down> :echoe "Use j"<CR>
+
+
 " Use the Solarized Dark theme
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
+" set background=dark
+" colorscheme solarized
+" let g:solarized_termtrans=1
 
 " Make Vim more useful
 set nocompatible
@@ -46,6 +56,9 @@ set shiftwidth=2
 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+
+
+
 set list
 " Highlight searches
 set hlsearch
@@ -54,10 +67,15 @@ set ignorecase
 " Highlight dynamically as pattern is typed
 set incsearch
 " Always show status line
- set laststatus=2
+set laststatus=2
+" set search
+set smartcase
 
 " Disable error bells
-set noerrorbells
+" set noerrorbells
+nmap Q <Nop>
+set noerrorbells visualbell t_vb=
+
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 " Show the cursor position
