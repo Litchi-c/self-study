@@ -148,5 +148,6 @@ start()执行一些仅在Machine mode下允许的配置，然后切换到supervi
 
 大多数操作系统都采用了进程概念，而且大多数的进程都与xv6相似。然而，现代操作系统在一个进程中支持多个线程，以允许单个进程利用多个CPU。支持一个进程中的多个线程，涉及到xv6所没有的相当多的机制，包括潜在的接口更改(例如，Linux的clone，一个fork的变体)，以控制进程线程共享的方面。
 
-2.8 练习
+## 2.8 练习
+
 You can use gdb to observe the very first kernel-to-user transition. Run make qemu-gdb. In another window, in the same directory, run gdb. Type the gdb command break *0x3ffffff10e, which sets a breakpoint at the sret instruction in the kernel that jumps into user space. Type the continue gdb command. gdb should stop at the breakpoint, about to execute sret. Type stepi. gdb should now indicate that it is executing at address 0x0, which is in user space at the start of initcode.S.

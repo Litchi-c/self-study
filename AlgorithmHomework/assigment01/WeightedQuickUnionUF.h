@@ -2,18 +2,16 @@
 // Created by sugar on 4/18/22.
 //
 
-#ifndef ASSIGMENT01_QUICKUNIONUF_H
-#define ASSIGMENT01_QUICKUNIONUF_H
+#ifndef ASSIGMENT01_WEIGHTEDQUICKUNIONUF_H
+#define ASSIGMENT01_WEIGHTEDQUICKUNIONUF_H
 #include <vector>
-
 using std::vector;
-
-class QuickUnionUF{
+class WeightedQuickUnionUF{
 private:
     vector<int> id_;
     int n_;
 public:
-    QuickUnionUF(int num):n_{num}{
+    explicit WeightedQuickUnionUF(int num):n_{num}{
         id_.resize(n_);
         for (int i = 0; i < id_.size(); i++){
             id_[i] = i;
@@ -21,8 +19,10 @@ public:
     }
     int root(int i){
         // O(N)
-        while(i != id_[i])
+        while(i != id_[i]) {
+            id_[i] = id_[id_[i]];
             i = id_[i];
+        }
         return i;
     }
     bool connected(int p, int q){
@@ -35,6 +35,4 @@ public:
         int j = root(q);
         id_[i] = j;
     }
-};
-
-#endif //ASSIGMENT01_QUICKUNIONUF_H
+#endif //ASSIGMENT01_WEIGHTEDQUICKUNIONUF_H

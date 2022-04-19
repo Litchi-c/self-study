@@ -1,6 +1,5 @@
-#ifndef __QUICK_FIND_UF_H__ 
-#define __QUICK_FIND_UF_H__
-
+#ifndef ASSIGMENT01_QUICKFINDUF_H
+#define ASSIGMENT01_QUICKFINDUF_H
 #include <iostream>
 #include <cassert>
 #include <vector>
@@ -32,7 +31,7 @@ public:
 // loop:
 //     if id[i] == id[q]
 //				id[i] == id[p]
-// 当id[i] 是 id[q] 时，会导致q之后与q相同的值无法被修改了
+// 当id[i] 是 id[q] 时，会导致与q相同的值无法被修改了
 				for (int i = 0; i < id_.size(); ++i){
 						if (id_[i] == pid)
 								id_[i] = qid;
@@ -52,4 +51,4 @@ std::ostream &operator<<(std::ostream& os, QuickFindUF &uf){
 		os << std::endl;
 		return os;
 }
-#endif //__QUICK_FIND_UF_H__
+#endif ASSIGMENT01_QUICKFINDUF_H

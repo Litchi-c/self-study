@@ -12,7 +12,7 @@ public:
     }
     /*
      * Usage: int num = randomInteger(5, 10);
-     *  num is int, and scope is [5, 10).
+     *  num is a int, and scope is [5, 10).
      */
     int randomInteger(int low, int high){
         double d = std::rand() / (static_cast<double>(RAND_MAX) + 1);
