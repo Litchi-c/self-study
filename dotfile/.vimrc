@@ -1,7 +1,10 @@
 " Reference:
 " 1. https://github.com/anishathalye/dotfiles/blob/master/vimrc
 
+" set colorscheme
+syntax enable
 colorscheme molokai
+set background=dark
 set nocompatible " not vi compatible
 
 "------------------
@@ -75,7 +78,6 @@ set noerrorbells visualbell t_vb=
 
 set lbr           " line break
 set scrolloff=5   " show lines above and below cursor (when possible)
-set showmode      "show the current mode
 set laststatus=2
 set backspace=indent,eol,start " allow backspacing over everything
 set timeout timeoutlen=1000 ttimeoutlen=100 " fix slow O inserts
@@ -103,3 +105,20 @@ set clipboard=unnamed
 "---------------------
 " Plugin configuration
 "---------------------
+call plug#begin()
+  Plug 'preservim/nerdtree'
+  Plug 'itchyny/lightline.vim'
+call plug#end()
+
+" NerdTree set of keyboard map.
+
+" Start NERDTree and leave the cursor in it.
+" autocmd VimEnter * NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+" is unnecessary anymore
+" because the mode information is displayed in the statusline.
+set noshowmode      
