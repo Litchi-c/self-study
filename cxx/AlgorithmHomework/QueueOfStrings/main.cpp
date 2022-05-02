@@ -1,11 +1,9 @@
 //
 // Created by sugar on 2022/4/30.
 //
-
-
-// test client (optional)
+#include "QueueOfStrings.hpp"
 
 int main(){
 
-    retrun 0;
+    return EXIT_SUCCESS;
 }

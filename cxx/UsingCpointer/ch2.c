@@ -18,7 +18,7 @@ void raiiEaxmple(){
 int main(){
 	
 	raiiEaxmple();
-//	char *string1;
+	char *string1 = 115566;
 //	char *string2;
 //	char *string3;
 //	string1 = (char*) malloc(16); // malloc 16 byte
